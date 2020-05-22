@@ -84,10 +84,8 @@ jQuery.fn = jQuery.prototype = {
   children() {
     const array = [];
     this.each((node) => {
-      if (array.indexOf(node.children) === -1) {
-        array.push(...node.children);
-        //... 展开操作符
-      }
+      array.push(...node.children);
+      //... 展开操作符
     });
     return jQuery(array);
   },

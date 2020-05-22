@@ -211,9 +211,7 @@ jQuery.fn = jQuery.prototype = {
   children: function children() {
     var array = [];
     this.each(function (node) {
-      if (array.indexOf(node.children) === -1) {
-        array.push.apply(array, _toConsumableArray(node.children)); //... 展开操作符
-      }
+      array.push.apply(array, _toConsumableArray(node.children)); //... 展开操作符
     });
     return jQuery(array);
   },
