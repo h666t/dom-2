@@ -1,4 +1,3 @@
-let a = document.createElement("div");
-let b = (a.innerText = "hi");
-console.log(b);
-console.log($(".test").append(b));
+let api1 = $(".test").each((n) => console.log(n));
+let api2 = api1.parent().end().addClass("red");
+console.log(api2);
