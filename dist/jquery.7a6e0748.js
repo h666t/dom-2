@@ -244,6 +244,8 @@ jQuery.fn = jQuery.prototype = {
         return _this.get(0).appendChild(node);
       });
     }
+
+    return this;
   },
   get: function get(index) {
     return this.elements[index];

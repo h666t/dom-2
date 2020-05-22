@@ -122,8 +122,7 @@ var api1 = $(".test").each(function (n) {
   return console.log(n);
 });
 var api2 = api1.parent().end().addClass("red");
-console.log(api2);
-api2.append($("<span>1</span>"));
+console.log(api2.append($("<span>1</span>")).end().addClass("green"));
 },{}],"../../../../AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

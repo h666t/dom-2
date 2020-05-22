@@ -76,7 +76,6 @@ jQuery.fn = jQuery.prototype = {
         array.push(node.parentNode);
       }
     });
-    array.oldApi = this;
     return jQuery(array);
     //返回的是可操作的对象
   },
@@ -113,6 +112,7 @@ jQuery.fn = jQuery.prototype = {
     } else if (children.jquery === true) {
       children.each((node) => this.get(0).appendChild(node));
     }
+    return this;
   },
 
   get(index) {
