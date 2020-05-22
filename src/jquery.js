@@ -103,6 +103,18 @@ jQuery.fn = jQuery.prototype = {
     }
   },
 
+  append(children) {
+    if (children instanceof Element) {
+      this.get(0).appendChild(children);
+    } else if (children instanceof HTMLCollection) {
+      for (let i = 0; i < children.length; i++) {
+        this.get(0).appendChild(children[i]);
+      }
+    } else if (children.jquery === true) {
+      children.each((node) => this.get(0).appendChild(node));
+    }
+  },
+
   get(index) {
     return this.elements[index];
   },
